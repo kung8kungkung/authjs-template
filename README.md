@@ -1,6 +1,6 @@
-# Auth.js Sign-In Template
+# Next.js + Auth.js Authentication Template
 
-This project provides a foundational setup for integrating [`auth.js`](https://authjs.dev/) into your application to enable authentication functionalities and streamline your project development. Auth.js supports various authentication methods with numerous mainstream providers, simplifying the integration process when multiple methods are required.
+This [`next.js`](https://nextjs.org/) project provides a foundational setup for integrating [`auth.js`](https://authjs.dev/) into your application to enable authentication functionalities and streamline your project development. Auth.js supports various authentication methods with numerous mainstream providers, simplifying the integration process when multiple methods are required.
 
 The demo showcases:
 
