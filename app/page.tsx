@@ -2,6 +2,7 @@ import { auth, signIn, signOut } from '@/auth';
 
 export default async function Home() {
   const session = await auth();
+  const signInCallbackUrl = `${process.env.BASE_URL}/dashboard`;
   return (
     <main className='flex min-h-screen flex-col items-center justify-center p-24'>
       <div className='z-10 w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex'>
@@ -23,7 +24,7 @@ export default async function Home() {
           <form
             action={async () => {
               'use server';
-              await signIn();
+              await signIn('', { redirectTo: signInCallbackUrl });
             }}
           >
             <button
