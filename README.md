@@ -5,10 +5,11 @@ This project provides a foundational setup for integrating [`auth.js`](https://a
 The demo showcases:
 
 - The basic sign-in/sign-out flow
+- Restricted user access [ref](https://authjs.dev/guides/restricting-user-access)
 - Accessing session data
 - Customizing the default theme for the sign-in page
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Install dependencies
 
@@ -16,24 +17,27 @@ The demo showcases:
 bun install
 ```
 
-2. Prepare environment variables
+2. Set Up Environment Variables
 
 ```bash
 cp .env.local.example .env.local
 ```
 
-- `AUTH_SECRET` (**required**) - `openssl rand -base64 33` or any other secured way
-- `AUTH_GOOGLE_*` (**optional**) - go to [Google OAuth 2.0 official document](https://developers.google.com/identity/protocols/oauth2) and learn how to apply a credentials to leverage google oauth 2.0.
-  - For more details, please check out the Auth.js [guide](https://authjs.dev/guides/configuring-github)
+- `BASE_URL` (**optional**) - Used for sign-in success redirection. Adjust this based on your domain setup. It is not mandatory for integrating auth.js.
 
-3. Start dev server
+- `AUTH_SECRET` (**required**) - Generate a secure key using openssl rand -base64 33 or any other secure method.
+
+- `AUTH_GOOGLE_*` (**optional**) - Refer to the [Google OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) documentation to obtain credentials for Google OAuth 2.0.
+  For detailed instructions, check the Auth.js [guide](https://authjs.dev/getting-started/providers/google).
+
+3. Start the Development Server
 
 ```bash
 bun dev
 ```
 
-4. Open [the local server](http://localhost:3000) and click Signin. After signin with google, you will be redirected to /dashboard and see your email
+4. Open [the local server](http://localhost:3000) and click Sign In. After signing in with Google, you will be redirected to /dashboard and see your email.
 
-## 📝 License
+## License
 
 MIT
